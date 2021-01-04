@@ -1,5 +1,3 @@
-console.log("Client side javascript loaded !!!")
-
 let weatherform = document.getElementById("weatherform") 
 
 weatherform.addEventListener("submit", (e) => {
