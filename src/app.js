@@ -5,6 +5,7 @@ const geoCode = require('./utils/geoCode')
 const currentWeather = require('./utils/currentWeather')
 
 const app = express() 
+const port = process.env.PORT || 3000
 
 // Define paths 
 const pathToAsset = path.join(__dirname, "../public")
@@ -79,6 +80,6 @@ app.get('*', (req,res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Server is up and running at http://localhost:3000") 
+app.listen(port, () => {
+    console.log("Server is up and running at port "+ port) 
 })

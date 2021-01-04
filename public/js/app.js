@@ -10,7 +10,7 @@ weatherform.addEventListener("submit", (e) => {
     result.style.color = "black" 
     result.innerHTML = 'Loading....' 
 
-    fetch('http://localhost:3000/weather?address='+location.value).then( (response) => {
+    fetch('/weather?address='+location.value).then( (response) => {
     response.json().then((data) =>{
         console.log(data)
         let result = document.getElementById("result") 
