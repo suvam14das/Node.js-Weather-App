@@ -8,10 +8,7 @@ weatherform.addEventListener("submit", (e) => {
     console.log(location.value) 
 
     result.style.color = "black" 
-    result.innerHTML = 'Loading....' 
-
-    if(location.value.toUpperCase() === "SUNETRA") 
-        return result.innerHTML =  'Location : In mao\'s heart<br />Weather : Its very steamy with temperatures upto 69*C'
+    result.innerHTML = 'Loading....'     
 
     fetch('/weather?address='+location.value).then( (response) => {
     response.json().then((data) =>{
